@@ -5,19 +5,19 @@ export function MatchesSection() {
   const upcomingMatches = [
     {
       opponent: 'FC Morumbi',
-      date: '25 MAR 2026',
+      date: '20 JUN 2026',
       time: '19:30',
       location: 'Ginásio Paraisópolis',
     },
     {
       opponent: 'Unidos da Vila',
-      date: '01 ABR 2026',
+      date: '28 JUN 2026',
       time: '20:00',
       location: 'Arena Capão Redondo',
     },
     {
       opponent: 'Real Jardim',
-      date: '08 ABR 2026',
+      date: '05 JUL 2026',
       time: '18:00',
       location: 'Ginásio Paraisópolis',
     },
@@ -51,7 +51,7 @@ export function MatchesSection() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-[#1A1A1A]">
+    <section id="jogos" className="py-24 px-4 bg-[#1A1A1A]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -50,6 +50,7 @@ export function ContactSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://www.instagram.com/futsalparaisopolis', '_blank')}
             className="px-10 py-4 bg-[#D4A64A] text-[#0A0A0A] mb-12 transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,166,74,0.8)]"
             style={{ 
               fontFamily: 'Poppins, sans-serif',

@@ -18,22 +18,6 @@ export function GallerySection() {
       url: jerseyImage,
       alt: 'Camisa temp 2026 edição 10 anos',
     },
-    {
-      url: 'https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXRzYWwlMjBwbGF5ZXJzJTIwY29tcGV0aW5nfGVufDF8fHx8MTc3NDEyMjI4OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      alt: 'Jogadores competindo',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1582586302869-715be816f60b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjB0ZWFtJTIwaHVkZGxlfGVufDF8fHx8MTc3NDEwMzUwMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      alt: 'Time unido',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1760174012435-630a17a434ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXRzYWwlMjBwbGF5ZXIlMjBhY3Rpb258ZW58MXx8fHwxNzc0MTIyMjI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      alt: 'Jogador em ação',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1607417307259-afd87bdf92a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBnb2FsJTIwY2VsZWJyYXRpb258ZW58MXx8fHwxNzc0MDg5MjU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      alt: 'Comemoração de gol',
-    },
   ];
 
   return (

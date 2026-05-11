@@ -1,8 +1,18 @@
+import { useMemo } from 'react';
 import { motion } from 'motion/react';
 import logoImage from 'figma:asset/8d0f72923cf451471a5a788fa5c4ac68afeb6aab.png';
 import lionHeroImage from 'figma:asset/23d58ee174c7714811d80337535f4d9dc21afe86.png';
 
 export function HeroSection() {
+  const particles = useMemo(() =>
+    Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 3 + Math.random() * 2,
+      delay: Math.random() * 2,
+    })), []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
       {/* Background Image with Overlay */}
@@ -17,13 +27,13 @@ export function HeroSection() {
 
       {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {particles.map((p) => (
           <motion.div
-            key={i}
+            key={p.id}
             className="absolute w-1 h-1 bg-[#D4A64A] rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${p.left}%`,
+              top: `${p.top}%`,
             }}
             animate={{
               y: [-20, 20],
@@ -31,9 +41,9 @@ export function HeroSection() {
               scale: [1, 1.5, 1],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: p.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: p.delay,
             }}
           />
         ))}
@@ -92,6 +102,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <button 
+            onClick={() => document.getElementById('elenco')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-8 py-4 bg-[#D4A64A] text-[#0A0A0A] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,166,74,0.8)] hover:scale-105"
             style={{ 
               fontFamily: 'Poppins, sans-serif',
@@ -102,6 +113,7 @@ export function HeroSection() {
             VER ELENCO
           </button>
           <button 
+            onClick={() => document.getElementById('jogos')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-8 py-4 bg-transparent border-2 border-[#D4A64A] text-[#D4A64A] transition-all duration-300 hover:bg-[#D4A64A] hover:text-[#0A0A0A] hover:shadow-[0_0_30px_rgba(212,166,74,0.8)] hover:scale-105"
             style={{ 
               fontFamily: 'Poppins, sans-serif',

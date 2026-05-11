@@ -5,8 +5,6 @@ export function SponsorsSection() {
     { name: 'Mattos Calçados e Confecções', logo: 'M' },
     { name: 'Elewe Sports', logo: 'E' },
     { name: 'Cyber Games', logo: 'CG' },
-    { name: 'Sponsor 4', logo: 'S4' },
-    { name: 'Sponsor 5', logo: 'S5' },
   ];
 
   return (
