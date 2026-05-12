@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 export function StatsSection() {
   const stats = [
     { value: '4', label: 'Jogos' },
-    { value: '3', label: 'Vitórias' },
+    { value: '2', label: 'Vitórias' },
     { value: '1', label: 'Empates' },
-    { value: '0', label: 'Derrotas' },
-    { value: '83%', label: 'Aproveitamento' },
+    { value: '1', label: 'Derrotas' },
+    { value: '58%', label: 'Aproveitamento' },
   ];
 
   return (

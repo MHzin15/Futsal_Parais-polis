@@ -13,7 +13,7 @@ export function RosterSection() {
     {
       name: 'Sansei',
       position: 'Pivô',
-      number: 9,
+      number: 10,
       goals: 3,
       assists: 4,
       image: sanseiImage,
@@ -61,7 +61,7 @@ export function RosterSection() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-[#0A0A0A]">
+    <section id="elenco" className="py-24 px-4 bg-[#0A0A0A]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -164,7 +164,7 @@ export function RosterSection() {
                           fontSize: '0.875rem',
                         }}
                       >
-                        {player.assists} Assists
+                        {player.assists} Assistências
                       </span>
                     </div>
                   </div>

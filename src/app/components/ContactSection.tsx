@@ -50,6 +50,7 @@ export function ContactSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://www.instagram.com/futsalparaisoo/', '_blank')}
             className="px-10 py-4 bg-[#D4A64A] text-[#0A0A0A] mb-12 transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,166,74,0.8)]"
             style={{ 
               fontFamily: 'Poppins, sans-serif',
@@ -64,8 +65,8 @@ export function ContactSection() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: Mail, label: 'Email', value: 'contato@futsalparaisopolis.com.br' },
-              { icon: Phone, label: 'Telefone', value: '(11) 98765-4321' },
-              { icon: Instagram, label: 'Instagram', value: '@futsalparaisopolis' },
+              { icon: Phone, label: 'Telefone', value: '+55 35 99120-5200' },
+              { icon: Instagram, label: 'Instagram', value: '@futsalparaisoo' },
             ].map((item, index) => (
               <motion.div
                 key={index}
