@@ -9,6 +9,10 @@ export function SponsorsSection() {
     { name: 'Código Seguros', logo: `${basePath}sponsors/codigo-seguros.png` },
     { name: 'Barbearia Liviz', logo: `${basePath}sponsors/barbearia-liviz.png` },
     { name: 'Cachaça Amelia', logo: `${basePath}sponsors/cachaca-amelia.png` },
+    { name: 'Auto Escola São José', logo: `${basePath}sponsors/auto-escola-são-josé.png` },
+    { name: 'Miofit', logo: `${basePath}sponsors/miofit.png` },
+    { name: 'Romilson Santos', logo: `${basePath}sponsors/romilson-santos.png` },
+    { name: 'Santos', logo: `${basePath}sponsors/santos.png` },
   ];
 
   return (
