@@ -2,27 +2,16 @@ import { motion } from 'motion/react';
 import { Calendar, MapPin, Trophy } from 'lucide-react';
 
 export function MatchesSection() {
-  const upcomingMatches = [
-    {
-      opponent: 'FC Morumbi',
-      date: '20 JUN 2026',
-      time: '19:30',
-      location: 'Ginásio Paraisópolis',
-    },
-    {
-      opponent: 'Unidos da Vila',
-      date: '28 JUN 2026',
-      time: '20:00',
-      location: 'Arena Capão Redondo',
-    },
-    {
-      opponent: 'Real Jardim',
-      date: '05 JUL 2026',
-      time: '18:00',
-      location: 'Ginásio Paraisópolis',
-    },
-  ];
+  type Match = {
+    opponent: string;
+    date: string;
+    time: string;
+    location: string;
+  };
 
+  const upcomingMatches: Match[] = [ 
+
+   ];
   const pastMatches = [
     {
       opponent: 'Resenha FC',
@@ -94,55 +83,72 @@ export function MatchesSection() {
               PRÓXIMOS JOGOS
             </h3>
             <div className="space-y-4">
-              {upcomingMatches.map((match, index) => (
+              {upcomingMatches.length === 0 ? (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-[#0A0A0A] border-2 border-[#D4A64A]/30 p-6 hover:border-[#D4A64A] transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,166,74,0.3)]"
+                  className="bg-[#0A0A0A] border-2 border-dashed border-[#D4A64A]/30 p-8 text-center flex flex-col items-center justify-center min-h-[150px] rounded-lg"
                 >
-                  <div className="flex justify-between items-start mb-4">
-                    <h4 
-                      className="text-white"
-                      style={{ 
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '1.5rem',
-                        letterSpacing: '0.05em',
-                      }}
-                    >
-                      vs {match.opponent}
-                    </h4>
-                    <div className="text-right">
-                      <div 
-                        className="text-[#D4A64A]"
+                  <Calendar className="w-8 h-8 text-[#D4A64A]/50 mb-3" />
+                  <p 
+                    className="text-gray-400" 
+                    style={{ fontFamily: 'Poppins, sans-serif' }}
+                  >
+                    Nenhum jogo agendado no momento.<br/>Fique de olho para novas datas!
+                  </p>
+                </motion.div>
+              ) : (
+                upcomingMatches.map((match, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-[#0A0A0A] border-2 border-[#D4A64A]/30 p-6 hover:border-[#D4A64A] transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,166,74,0.3)]"
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <h4 
+                        className="text-white"
                         style={{ 
-                          fontFamily: 'Poppins, sans-serif',
-                          fontSize: '0.875rem',
-                          fontWeight: 600,
+                          fontFamily: 'Bebas Neue, sans-serif',
+                          fontSize: '1.5rem',
+                          letterSpacing: '0.05em',
                         }}
                       >
-                        {match.time}
+                        vs {match.opponent}
+                      </h4>
+                      <div className="text-right">
+                        <div 
+                          className="text-[#D4A64A]"
+                          style={{ 
+                            fontFamily: 'Poppins, sans-serif',
+                            fontSize: '0.875rem',
+                            fontWeight: 600,
+                          }}
+                        >
+                          {match.time}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="flex flex-wrap gap-4 text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-[#D4A64A]" />
-                      <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.875rem' }}>
-                        {match.date}
-                      </span>
+                    <div className="flex flex-wrap gap-4 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-[#D4A64A]" />
+                        <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.875rem' }}>
+                          {match.date}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-[#D4A64A]" />
+                        <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.875rem' }}>
+                          {match.location}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#D4A64A]" />
-                      <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '0.875rem' }}>
-                        {match.location}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))
+              )}
             </div>
           </div>
 
